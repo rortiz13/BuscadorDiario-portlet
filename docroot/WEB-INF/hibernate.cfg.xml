@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="">
+        <mapping class="la.netco.generico.persistencia.dto.TiposNormas" />
+        <mapping class="la.netco.generico.persistencia.dto.DiariosHtml" />
+        <mapping class="la.netco.generico.persistencia.dto.EntidadesBancarias" />
+        <mapping class="la.netco.generico.persistencia.dto.TiposEntidades" />
+        <mapping class="la.netco.generico.persistencia.dto.Recibos" />
+        <mapping class="la.netco.generico.persistencia.dto.TiposPagos" />
+        <mapping class="la.netco.generico.persistencia.dto.Entidades" />
+        <mapping class="la.netco.generico.persistencia.dto.Imagenes" />
+        <mapping class="la.netco.generico.persistencia.dto.DiariosOficiales" />
+        <mapping class="la.netco.generico.persistencia.dto.Indices" />
+        <mapping class="la.netco.generico.persistencia.dto.DiariosPdf" />
+        <mapping class="la.netco.generico.persistencia.dto.TiposEdiciones" />
+    </session-factory>
+</hibernate-configuration>

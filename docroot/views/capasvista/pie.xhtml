@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="formPie" styleClass="formMenu">
+
+		<div class="spacer50"></div>
+		<h:panelGrid columns="2" width="95%" columnClasses="columnaCentro,columnaIzq" styleClass="pnlPie">
+
+			<h:outputLabel value="#{capasVistasBean.textoSuscripcion}" styleClass="lbl16VNegrita" />
+
+			<h:panelGrid columns="1" width="100%" columnClasses="columnaIzq4">
+
+				<h:outputLabel value="#{i18n['piecontacto']}" styleClass="lbl12Negrita" />
+
+				<h:panelGrid columns="2">
+					<p:graphicImage id="comObligatorio1" value="/views/images/icon_chat.png" />
+					<h:outputLabel value="#{capasVistasBean.correoContacto}" styleClass="lbl12NegritaV" />
+				</h:panelGrid>
+
+				<h:panelGrid columns="2">
+					<p:graphicImage id="comObligatorio2" value="/views/images/icon_tel.png" />
+					<h:outputLabel value="#{i18n['pielinea']}  #{capasVistasBean.telContacto}" styleClass="lbl12NegritaV" />
+				</h:panelGrid>
+			</h:panelGrid>
+
+		</h:panelGrid>
+		<div class="spacer20"></div>
+
+	</h:form>
+
+</ui:composition>

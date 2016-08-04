@@ -1,0 +1,110 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" template="/views/capasvista/template.xhtml" xmlns:aui-cc="http://liferay.com/faces/aui-cc">
+	<ui:define name="body">
+		<div class="spacer5"></div>
+
+		<h:form styleClass="formBasico" id="formNormaDiario">
+
+			<!-- Mesajes de Alerta Requeridos -->
+			<h:panelGroup id="pnlMensajes">
+				<aui-cc:messages globalOnly="false" layout="list" />
+			</h:panelGroup>
+			<!-- Fin de Mensajes -->
+
+
+			<h:panelGrid id="pnlTextoGnral" columns="1" columnClasses="columnaCentro" width="100%">
+				<h:outputLabel styleClass="lbl16VNegrita" value="#{txto.normadigitedatos}" />
+			</h:panelGrid>
+
+			<div class="spacer50"></div>
+
+			<h:panelGrid id="pnlDatosFiltros" width="90%" columns="6" styleClass="margenIzq10">
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normanorma}" for="selectTiposNormas" />
+				<p:selectOneMenu id="selectTiposNormas" styleClass="selectNormal" value="#{indicesPorletBean.codigoTipoNormaSel}">
+					<f:selectItem itemLabel="#{txto.seleccione}" />
+					<f:selectItems value="#{indicesPorletBean.itemsTiposNormas}" />
+				</p:selectOneMenu>
+
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normanumero}" />
+				<h:inputText styleClass="inpNormal" value="#{indicesPorletBean.numero}" alt="#{txto.normanumero}" label="#{txto.normanumero}" title="#{txto.normanumero}" />
+
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normaentidad}" for="selectEntidades" />
+				<p:selectOneMenu id="selectEntidades" styleClass="selectNormal" value="#{indicesPorletBean.codigoEntidadSel}">
+					<f:selectItem itemLabel="#{txto.seleccione}" />
+					<f:selectItems value="#{indicesPorletBean.itemsEntidad}" />
+				</p:selectOneMenu>
+			</h:panelGrid>
+
+			<div class="spacer15"></div>
+
+			<h:panelGrid id="pnlFechasFiltros" styleClass="centradoDosE60" columns="2" columnClasses="columnaIzq">
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normafechainicial}" for="calFechaInicialDiario5" />
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normafechafinal}" for="calFechaFinalDiario6" />
+				<p:calendar id="calFechaInicialDiario5" value="#{indicesPorletBean.fechaInicial}" pattern="dd/mm/yyyy" locale="es" showButtonPanel="true" navigator="true" effect="drop"
+					styleClass="calNormal" showOn="button" />
+				<p:calendar id="calFechaFinalDiario6" value="#{indicesPorletBean.fechaFinal}" pattern="dd/mm/yyyy" locale="es" showButtonPanel="true" navigator="true" effect="drop"
+					styleClass="calNormal" showOn="button" />
+			</h:panelGrid>
+
+			<div class="spacer15"></div>
+			<h:panelGrid columns="1" id="pnlBoton" columnClasses="columnaCentro" width="100%">
+				<p:commandButton value="#{txto.iniciarbusqueda}" actionListener="#{indicesPorletBean.cargaFiltros}" update="pnlDatosRender pnlMensajes" styleClass="btnNormal" />
+			</h:panelGrid>
+			<div class="spacer15"></div>
+
+			<h:panelGrid id="pnlDatosRender" width="100%">
+
+				<h:outputText styleClass="lbl13Normal" value="#{txto.numeroencontraron} #{indicesPorletBean.numeroresultados}  #{txto.numeroresultados}" rendered="#{indicesPorletBean.activo}" />
+
+				<h:outputLabel styleClass="lbl13Normal" value="#{txto.normaentrefechas} " rendered="#{indicesPorletBean.actRangoFechas}" />
+				<h:outputText styleClass="lbl13Normal" value="#{indicesPorletBean.fechaInicial} " rendered="#{indicesPorletBean.actRangoFechas}" />
+				<h:outputLabel styleClass="lbl12Normal" value="#{txto.normay} " rendered="#{indicesPorletBean.actRangoFechas}" />
+				<h:outputText styleClass="lbl12Normal" value="#{indicesPorletBean.fechaFinal} " rendered="#{indicesPorletBean.actRangoFechas}" />
+
+				<div class="spacer50"></div>
+
+				<h:panelGrid id="pnlTablaDatos" styleClass="pnlCuatroColumnas" columns="1" rendered="#{indicesPorletBean.activo}">
+					<p:dataTable id="dataTable" var="vIndice" value="#{indicesPorletBean.indicesDataModel}" paginator="true" lazy="true" rows="10" pageLinks="5" paginatorPosition="bottom"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" rowsPerPageTemplate="5,10,15">
+						<p:column styleClass="columnaCentro">
+							<f:facet name="header">
+								<h:outputText value="#{txto.norma}" styleClass="lbl12Negrita" />
+							</f:facet>
+							<h:outputText value="#{indicesPorletBean.obtenerNorma(vIndice.tiposNormas.codigo)}" styleClass="lbl13Normal" />
+						</p:column>
+						<p:column styleClass="columnaCentro">
+							<f:facet name="header">
+								<h:outputText value="#{txto.diario}" styleClass="lbl12Negrita" />
+							</f:facet>
+							<h:outputText value="#{vIndice.diariosOficiales.numero}" styleClass="lbl13Normal" />
+						</p:column>
+						<p:column styleClass="columnaCentro">
+							<f:facet name="header">
+								<h:outputText value="#{txto.fechaDiario}" styleClass="lbl12Negrita" />
+							</f:facet>
+							<h:outputText value="#{indicesPorletBean.obtenerFecha(vIndice.diariosOficiales.numero)}" styleClass="lbl13Normal">
+								<f:convertDateTime pattern="dd-MMM-yyyy" />
+							</h:outputText>
+						</p:column>
+						<p:column styleClass="columnaCentro">
+							<f:facet name="header">
+								<h:outputText value="#{txto.formato}" styleClass="lbl12Negrita" />
+							</f:facet>
+							<h:panelGroup id="pnlimgs">
+								<h:commandLink actiosnListener="#{indicesPorletBean.descargarPDF(vIndice.diariosOficiales.numero)}" target="_blank">
+									<p:graphicImage id="comDescargaDiario" value="/views/images/icon_pdf.png" alt="#{txto.titpdf}" title="#{txto.titpdf}" />
+								</h:commandLink>
+								<h:commandLink action="#{indicesPorletBean.detalleUtilDtl(vIndice.diariosOficiales.numero)}" styleClass="margenIzq10">
+									<p:graphicImage id="comHTMLDiario" value="/views/images/icon_html.png" title="#{txto.tithtml}" alt="#{txto.tithtml}" />
+								</h:commandLink>
+							</h:panelGroup>
+						</p:column>
+					</p:dataTable>
+				</h:panelGrid>
+			</h:panelGrid>
+
+		</h:form>
+
+		<div class="spacer50"></div>
+	</ui:define>
+</ui:composition>

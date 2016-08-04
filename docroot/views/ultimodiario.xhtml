@@ -1,0 +1,54 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:p="http://primefaces.org/ui" template="/views/capasvista/template.xhtml">
+	<ui:define name="body">
+		<div class="spacer5"></div>
+
+		<f:event listener="#{ultimoDiarioBean.cargarUltimoDiario}" type="preRenderView"></f:event>
+
+		<h:form styleClass="formBasico">
+			<h:panelGrid id="pnlTextoGnral" columns="1" columnClasses="columnaCentro" width="100%">
+				<h:outputLabel styleClass="lbl16VNegrita" value="#{txto.ultimodiariolbluno} #{ultimoDiarioBean.ultimoDiarioOficial.numero} #{txto.ultimodiariolbldos}" />
+			</h:panelGrid>
+
+			<div class="spacer50"></div>
+
+			<h:panelGrid id="pnlTablaDatos" columns="1" styleClass="pnlCuatroColumnas">
+				<p:dataTable id="tablaDatosDiario" var="vDiario" value="#{ultimoDiarioBean.ultimoDiarioOficial}" lazy="true" rows="1">
+					<p:column styleClass="columnaCentro">
+						<f:facet name="header">
+							<h:outputText value="#{txto.diarionumero}" styleClass="lbl12Negrita" />
+						</f:facet>
+						<h:outputText value="#{vDiario.numero}" styleClass="lbl12Normal" />
+					</p:column>
+					<p:column styleClass="columnaCentro">
+						<f:facet name="header">
+							<h:outputText value="#{txto.fecha}" styleClass="lbl12Negrita" />
+						</f:facet>
+						<h:outputText value="#{vDiario.fecha}" styleClass="lbl12Normal" />
+					</p:column>
+					<p:column styleClass="columnaCentro">
+						<f:facet name="header">
+							<h:outputText value="#{txto.edicion}" styleClass="lbl12Negrita" />
+						</f:facet>
+						<h:outputText value="#{ultimoDiarioBean.tedicionUltimoDiario.nombre}" styleClass="lbl12Normal" />
+					</p:column>
+					<p:column styleClass="columnaCentro">
+						<f:facet name="header">
+							<h:outputText value="#{txto.contenido}" styleClass="lbl12Negrita" />
+						</f:facet>
+						<h:panelGroup id="pnlimgs">
+							<h:commandLink actionListener="#{ultimoDiarioBean.descargarPDF(vDiario.numero)}" target="_blank">
+								<p:graphicImage id="comDescargaDiario" value="/views/images/icon_pdf.png" alt="#{txto.titpdf}" title="#{txto.titpdf}" />
+							</h:commandLink>
+							<h:commandLink style="color: black;" action="#{ultimoDiarioBean.detalleUtilDtl(vDiario.numero)}" styleClass="margenIzq10">
+								<p:graphicImage id="comHTMLDiario" value="/views/images/icon_html.png" title="#{txto.tithtml}" alt="#{txto.tithtml}" />
+							</h:commandLink>
+						</h:panelGroup>
+					</p:column>
+				</p:dataTable>
+			</h:panelGrid>
+		</h:form>
+
+		<div class="spacer50"></div>
+	</ui:define>
+</ui:composition>

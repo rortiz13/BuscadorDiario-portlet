@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#views#ultimodiario.xhtml"
+  PATH="/views/ultimodiario.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#*" PATH="/views/*" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#views#*:0" NAME="item" PATH="/views/*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="ultimodiario::#views#ultimodiario.xhtml"
+    NAME="output" PATH="/views/ultimodiario.xhtml"
+    TARGET="rules:#views#ultimodiario.xhtml" TITLE="ultimodiario" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="numerodiario::#views#numerodiario.xhtml"
+    NAME="output1" PATH="/views/numerodiario.xhtml"
+    TARGET="rules:#views#numerodiario.xhtml" TITLE="numerodiario" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="fechadiario::#views#fechadiario.xhtml"
+    NAME="output2" PATH="/views/fechadiario.xhtml"
+    TARGET="rules:#views#fechadiario.xhtml" TITLE="fechadiario" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="normadiario::#views#normadiario.xhtml"
+    NAME="output3" PATH="/views/normadiario.xhtml"
+    TARGET="rules:#views#normadiario.xhtml" TITLE="normadiario" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="visordetalle::#views#visorDetalle.xhtml"
+    NAME="output4" PATH="/views/visorDetalle.xhtml"
+    TARGET="rules:#views#visorDetalle.xhtml" TITLE="visordetalle" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="diariopdf::#views#VistaPDF.xhtml"
+    NAME="output5" PATH="/views/VistaPDF.xhtml"
+    TARGET="rules:#views#VistaPDF.xhtml" TITLE="diariopdf" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="diarioepub::#views#VistaEPUB.xhtml"
+    NAME="output6" PATH="/views/VistaEPUB.xhtml"
+    TARGET="rules:#views#VistaEPUB.xhtml" TITLE="diarioepub" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#views#normadiario.xhtml"
+  PATH="/views/normadiario.xhtml" SHAPE="288,465,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#numerodiario.xhtml"
+  PATH="/views/numerodiario.xhtml" SHAPE="288,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#fechadiario.xhtml"
+  PATH="/views/fechadiario.xhtml" SHAPE="288,353,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#visorDetalle.xhtml"
+  PATH="/views/visorDetalle.xhtml" SHAPE="304,273,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#VistaPDF.xhtml"
+  PATH="/views/VistaPDF.xhtml" SHAPE="304,305,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#VistaEPUB.xhtml"
+  PATH="/views/VistaEPUB.xhtml" SHAPE="304,337,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

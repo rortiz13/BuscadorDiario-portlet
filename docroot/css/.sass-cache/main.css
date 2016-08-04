@@ -1,0 +1,442 @@
+.portlet-msg-error {
+  font-style: italic;
+  font-weight: bold;
+  margin: 1px 0px 0px 0px;
+  padding: 1px 5px 1px 24px; }
+
+.portlet-msg-info {
+  font-style: italic;
+  margin: 1px 0px 0px 0px;
+  padding: 1px 5px 1px 24px; }
+
+.divContent {
+  background: rgba(221, 221, 221, 0.79); }
+
+.spacer5 {
+  height: 5px; }
+
+.spacer10 {
+  height: 10px; }
+
+.spacer20W {
+  width: 20%; }
+
+.spacer15 {
+  height: 15px; }
+
+.spacer20 {
+  height: 20px; }
+
+.spacer25 {
+  height: 25px; }
+
+.spacer30 {
+  height: 25px; }
+
+.spacer50 {
+  height: 50px; }
+
+.margenIzq10 {
+  margin-left: 10%; }
+
+.columnaCentro {
+  text-align: center; }
+
+.columnaCentroImgs {
+  text-align: center;
+  border: 0px;
+  width: 10%; }
+
+.columnaCentroF12 {
+  text-align: center; }
+
+.columnaBtnAyuda {
+  text-align: right; }
+
+.columnaIzq {
+  text-align: left; }
+
+.columnaIzq4 {
+  text-align: left;
+  padding-top: 4px; }
+
+.columnaDer {
+  text-align: right; }
+
+.centradoDosE60 {
+  font-family: Lucida Sans;
+  width: 60%;
+  margin-left: 25%; }
+
+.centradoDosE40 {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%; }
+
+.pnlCuatroColumnas {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; }
+
+.pnlPie {
+  background: #e4e4e4 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+  border: 1px solid silver;
+  margin-left: 2.5%;
+  height: 70px; }
+
+.lbl13Normal {
+  font-family: Lucida Sans;
+  font-weight: normal;
+  font-size: 13px;
+  color: black; }
+
+.textoEnMenu {
+  font-family: Lucida Sans;
+  color: #009292;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 5% !important; }
+
+.lbl12Normal {
+  font-family: Lucida Sans;
+  font-weight: normal;
+  font-size: 12px;
+  color: black; }
+
+.lbl12NegritaV {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 12px;
+  color: #009292; }
+
+.lbl14Negrita {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 14px; }
+
+.lbl14NegritaV {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 14px;
+  color: #009292; }
+
+.lbl12Negrita {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 12px; }
+
+.lbl16VNegrita {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 16px;
+  color: #009292; }
+
+.columnaMenuPpal div.ui-tabmenu {
+  width: 80% !important;
+  height: 60px !important;
+  border-radius: 0px !important;
+  border-bottom: 1px solid silver;
+  border-right: 0;
+  border-left: 1px solid silver;
+  border-top: 1px solid silver;
+  background: #e4e4e4 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0))) !important;
+  margin-left: 10%; }
+
+.menuPrincipal ul.ui-tabmenu-nav {
+  margin: 0;
+  padding: 0;
+  background: #e4e4e4 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+  height: 60px;
+  border: 0px;
+  width: 100%; }
+
+.menuPrincipal li.ui-tabmenuitem {
+  width: 24.87% !important;
+  height: 60px !important;
+  background: #e4e4e4 -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0))) !important;
+  top: 0px !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-right: 1px solid silver !important;
+  border-radius: 0px !important;
+  display: block !important;
+  white-space: nowrap !important;
+  list-style: none !important;
+  float: left !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: 0px 0px 0px !important; }
+
+.menuPrincipal li.ui-state-active {
+  width: 24.87% !important;
+  height: 60px !important;
+  background: #009292 !important;
+  top: 0px !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-left: 0 !important;
+  border-right: 1px solid silver !important;
+  border-radius: 0px !important;
+  display: block !important;
+  white-space: nowrap !important;
+  list-style: none !important;
+  float: left !important;
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-shadow: 0px 0px 0px !important; }
+
+.menuPrincipal a.ui-menuitem-link {
+  float: left !important;
+  padding: 0px !important;
+  margin-top: 15px;
+  text-decoration: none !important;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  margin-top: 15px; }
+
+#menuPrincipal .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+  color: white !important; }
+
+.menuPrincipal span.ui-menuitem-text {
+  font-family: Lucida Sans;
+  font-size: 13px;
+  text-shadow: 0 0 0;
+  font-weight: bold;
+  width: 100%;
+  white-space: pre-wrap !important;
+  padding: 15px 20px 0px 0px; }
+
+.icono-ultimodiario {
+  background-image: url("../views/images/icon_ultimo_diario.png") !important;
+  float: left !important;
+  margin-left: 10px;
+  width: 20% !important;
+  height: 30px !important; }
+
+.icono-numerodiario {
+  background-image: url("../views/images/icon_numero_diario.png") !important;
+  float: left !important;
+  margin-left: 10px;
+  width: 20% !important;
+  height: 30px !important; }
+
+.icono-rangofechas {
+  background-image: url("../views/images/icon_rango_fechas_diario.png") !important;
+  float: left !important;
+  margin-left: 10px;
+  width: 20% !important;
+  height: 30px !important; }
+
+.icono-normas {
+  background-image: url("../views/images/icon_norma_diario.png") !important;
+  float: left !important;
+  margin-left: 10px;
+  width: 20% !important;
+  height: 30px !important; }
+
+#select .ui-selectonemenu {
+  display: inline-block;
+  position: relative;
+  width: auto;
+  zoom: 1;
+  cursor: pointer;
+  overflow: hidden;
+  width: 180PX; }
+
+#scrollPanelDetalle .ui-corner-all {
+  border-radius: 0px; }
+
+#scrollPanelDetalle .ui-scrollpanel {
+  overflow: hidden;
+  outline: none;
+  height: 400px; }
+
+#scrollPanelDetalle .ui-datatable-data, .ui-datatable-data-empty {
+  border: 0px;
+  text-align: center; }
+
+#scrollPanelDetalle .ui-datatable-even {
+  border: 0px;
+  background: transparent; }
+
+#scrollPanelDetalle .ui-datatable-odd {
+  background: transparent;
+  border: 0px; }
+
+#scrollPanelDetalle .ui-datatable .ui-datatable-data td, .ui-datatable .ui-datatable-data-empty td {
+  border-width: 0px;
+  background: transparent;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden; }
+
+#scrollPanelDetalle .ui-datatable th, .ui-datatable tfoot td {
+  text-align: center;
+  white-space: nowrap;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  border: 0px;
+  background: transparent; }
+
+#scrollPanelDetalle .ui-datalist-content {
+  border: 0px;
+  background: transparent; }
+
+#scrollPanelDetalle .ui-datalist-item {
+  text-align: center; }
+
+#scrollPanelDetalle .ui-datalist-data {
+  list-style: none outside;
+  margin: 0px; }
+
+#scrollPanelDetalle .ui-scrollpanel-vbar {
+  background: #e4e4e4 -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0)));
+  border-radius: 0px;
+  border: 0px silver;
+  border-left: 1px solid silver; }
+
+#scrollPanelDetalle .ui-scrollpanel-bt {
+  border: 0px;
+  background: transparent;
+  margin: 0px;
+  width: 100%; }
+
+#scrollPanelDetalle .ui-scrollpanel-bb {
+  border: 0px;
+  background: transparent;
+  margin: 0px;
+  width: 100%; }
+
+#scrollPanelDetalle .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+  box-shadow: 0px 0px 0px silver;
+  cursor: pointer; }
+
+.formBasico {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%; }
+
+.formMenu {
+  width: 100%; }
+
+.columna50PW {
+  width: 50%; }
+
+.columna30PWIzq {
+  text-align: left;
+  width: 30%; }
+
+.columna70PWIzq {
+  text-align: left;
+  width: 70%; }
+
+.fila35XH {
+  height: 35px; }
+
+.margenIzq10 {
+  margin-left: 10%; }
+
+.btnAyuda {
+  border: 0px !important;
+  border-radius: 0px !important;
+  background-image: url("../views/images/icono_ayuda.png") !important;
+  background-repeat: no-repeat !important;
+  height: 49px !important;
+  width: 40px !important;
+  moz-box-shadow: 0px 0px 0px !important;
+  -webkit-box-shadow: 0px 0px 0px !important;
+  box-shadow: 0px 0px 0px !important; }
+
+.pnlDetalleImgs {
+  border: 1px solid silver;
+  width: 35%;
+  height: 80px;
+  text-align: center;
+  margin-left: 65%;
+  margin-top: 10%; }
+
+.imgsDetalle {
+  width: 30px;
+  height: 30px; }
+
+.sinLink {
+  color: #009292;
+  text-decoration: blink; }
+
+.titMayNegrita12 {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.titMayNegrita16 {
+  font-family: Lucida Sans;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase; }
+
+.inpNormal {
+  border-radius: 0px !important;
+  border: 0.1em solid silver !important;
+  width: 80% !important;
+  background: white !important;
+  font: 1em Lucida sans !important;
+  box-shadow: inset 0 0px 0px #8f8f8f !important; }
+
+.btnNormal {
+  border-radius: 0px !important;
+  background: #009292 !important;
+  color: white !important;
+  font-weight: normal !important;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", 		sans-serif !important;
+  font-size: 13px !important;
+  border: 0px !important;
+  -webkit-box-shadow: 0px 0px 0px #85b2cb, inset 0px 0px 0px #fff 		!important;
+  box-shadow: 0px 0px 0px #85b2cb, inset 0px 0px 0px #fff !important;
+  width: 150px !important;
+  text-shadow: 0px 0px 0px !important; }
+
+.calNormal input.ui-inputfield {
+  border-radius: 0px !important;
+  border: 0.1em solid silver !important;
+  width: 80% !important;
+  background: white !important;
+  font: 1em Lucida sans !important;
+  box-shadow: inset 0 0px 0px #8f8f8f !important; }
+
+.calNormal button.ui-button {
+  border-radius: 0px !important;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  border: 0px !important;
+  width: 26px !important;
+  height: 26px !important;
+  background-image: url("../views/images/icon_fechas.png"); }
+
+.calNormal span.ui-button-icon-left {
+  background-image: none !important; }
+
+.selectNormal {
+  width: 120px !important;
+  border: 1px solid silver !important; }
+
+.selectNormal label.ui-selectonemenu-label {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", 		sans-serif !important;
+  border: 0px !important;
+  font-weight: bold;
+  color: #006969;
+  box-shadow: inset 0 0px 0px #8f8f8f !important;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.28, #e0e0e0), color-stop(1, white)) !important; }
+
+.selectNormal div.ui-selectonemenu-trigger {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.28, #e0e0e0), color-stop(1, white)) !important;
+  border-left-color: silver; }
+

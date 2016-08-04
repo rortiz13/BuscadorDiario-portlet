@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+	<navigation-rule>
+		<from-view-id>/views/*</from-view-id>
+		<navigation-case>
+			<from-outcome>ultimodiario</from-outcome>
+			<to-view-id>/views/ultimodiario.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>numerodiario</from-outcome>
+			<to-view-id>/views/numerodiario.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>fechadiario</from-outcome>
+			<to-view-id>/views/fechadiario.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>normadiario</from-outcome>
+			<to-view-id>/views/normadiario.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>visordetalle</from-outcome>
+			<to-view-id>/views/visorDetalle.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>diariopdf</from-outcome>
+			<to-view-id>/views/VistaPDF.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>diarioepub</from-outcome>
+			<to-view-id>/views/VistaEPUB.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+	<lifecycle>
+		<phase-listener>com.liferay.faces.util.lifecycle.ViewScopePhaseListener</phase-listener>
+	</lifecycle>
+</faces-config>

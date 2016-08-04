@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" xmlns:aui-cc="http://liferay.com/faces/aui-cc">
+
+<f:view contentType="text/html">
+	<h:head>
+		<f:loadBundle basename="Language_es_ES" var="txto" />
+	</h:head>
+
+	<h:form id="formEditDiarioOficial">
+		<!-- Mensajes de Alerta  -->
+		<h:panelGroup id="pnlMensajes">
+			<aui-cc:messages globalOnly="false" layout="list" />
+		</h:panelGroup>
+		<!-- Fin de Mensajes -->
+		<h:panelGrid id="pnlBasico" columns="2">
+			<h:outputLabel value="#{txto.confayuda}" for="comTxtoAyuda" />
+			<p:inputTextarea id="comTxtoAyuda" value="#{configuracionBean.textoAyuda}" />
+
+			<h:outputLabel value="#{txto.confsus}" for="comTxtoSus" />
+			<p:inputTextarea id="comTxtoSus" value="#{configuracionBean.textoSuscripcion}" />
+
+			<h:outputLabel value="#{txto.confcorreocontacto}" for="comCorreoContacto" />
+			<p:inputTextarea id="comCorreoContacto" value="#{configuracionBean.correoContacto}" />
+
+			<h:outputLabel value="#{txto.conftelcontacto}" for="comTelContacto" />
+			<p:inputTextarea id="comTelContacto" value="#{configuracionBean.telContacto}" />
+		</h:panelGrid>
+		<div class="spacer20"></div>
+		<h:panelGrid id="pnlBtn">
+			<p:commandButton id="btnGuardar" update="pnlMensajes" value="#{txto.confguardar}" label="#{txto.confguardar}" title="#{txto.confguardar}" alt="#{txto.confguardar}"
+				actionListener="#{configuracionBean.guardarCambios}" />
+		</h:panelGrid>
+	</h:form>
+
+</f:view>
+</html>

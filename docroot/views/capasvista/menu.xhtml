@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core" xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+	<h:form id="formMenu" styleClass="formMenu">
+		<h:panelGrid columns="1" columnClasses="columnaCentro" styleClass="formBasico">
+			<h:outputLabel styleClass="textoEnMenu" value="#{i18n['menutexto']}" />
+		</h:panelGrid>
+
+		<div class="spacer30"></div>
+
+		<h:panelGrid columns="1" columnClasses="columnaMenuPpal" width="100%">
+			<p:tabMenu id="menuPrincipalTab" activeIndex="#{capasVistasBean.indexMenuTab}" styleClass="menuPrincipal">
+				<p:menuitem action="#{capasVistasBean.escuchadorMenu('0')}" value="#{i18n['menuultimodiario']}" id="itemUltimoDiario" ajax="false" icon="icono-ultimodiario" />
+
+				<p:menuitem action="#{capasVistasBean.escuchadorMenu('1')}" value="#{i18n['menunumerodiariopublicado']}" id="itemNumeroDiario" ajax="false" icon="icono-numerodiario" />
+
+				<p:menuitem action="#{capasVistasBean.escuchadorMenu('2')}" value="#{i18n['menurangofechasdiario']}" id="itemRangoFechas" ajax="false" icon="icono-rangofechas" />
+
+				<p:menuitem action="#{capasVistasBean.escuchadorMenu('3')}" value="#{i18n['menunormapublicada']}" id="itemNormaPublicada" ajax="false" icon="icono-normas " />
+			</p:tabMenu>
+		</h:panelGrid>
+
+		<div class="spacer15"></div>
+
+		<h:panelGrid id="pnlBtnAyuda" width="100%" columnClasses="columnaBtnAyuda">
+			<p:commandButton id="btnAyuda" value="" label="#{i18n['menuayuda']}" oncomplete="dialogoAyuda.show()" title="#{i18n['menuayuda']}" alt="#{i18n['menuayuda']}"
+				styleClass="btnAyuda" />
+		</h:panelGrid>
+
+		<p:dialog header="#{i18n['menuayuda']}" widgetVar="dialogoAyuda" modal="true" showEffect="fade">
+			<p:outputPanel id="pnlAyuda" style="text-align:center;" layout="block">
+
+				<h:panelGrid columns="2" cellpadding="5">
+					<h:outputText value="#{capasVistasBean.textoAyuda}" />
+				</h:panelGrid>
+			</p:outputPanel>
+		</p:dialog>
+	</h:form>
+
+</ui:composition>
